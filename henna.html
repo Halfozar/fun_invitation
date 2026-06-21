@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Henna Day 👐</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+    background:linear-gradient(
+        135deg,
+        #fff4e6,
+        #ffe8cc,
+        #fffaf0
+    );
+    overflow:hidden;
+}
+
+/* FLOATING FLOWERS */
+
+.flowers{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+}
+
+.flowers span{
+    position:absolute;
+    font-size:28px;
+    animation:floatFlower 12s linear infinite;
+}
+
+.flowers span::before{
+    content:"🌸";
+}
+
+.flowers span:nth-child(1){left:10%; animation-duration:10s;}
+.flowers span:nth-child(2){left:25%; animation-duration:13s;}
+.flowers span:nth-child(3){left:40%; animation-duration:11s;}
+.flowers span:nth-child(4){left:60%; animation-duration:15s;}
+.flowers span:nth-child(5){left:80%; animation-duration:12s;}
+
+@keyframes floatFlower{
+
+    from{
+        transform:
+        translateY(120vh)
+        rotate(0deg);
+    }
+
+    to{
+        transform:
+        translateY(-120px)
+        rotate(360deg);
+    }
+}
+
+/* MANDALA */
+
+.mandala{
+
+    position:fixed;
+
+    top:50%;
+    left:50%;
+
+    transform:
+    translate(-50%,-50%);
+
+    font-size:300px;
+
+    opacity:.05;
+
+    animation:
+    rotateMandala 50s linear infinite;
+
+    pointer-events:none;
+}
+
+@keyframes rotateMandala{
+
+    from{
+        transform:
+        translate(-50%,-50%)
+        rotate(0deg);
+    }
+
+    to{
+        transform:
+        translate(-50%,-50%)
+        rotate(360deg);
+    }
+}
+
+/* CARD */
+
+.detail-card{
+
+    max-width:700px;
+
+    margin:60px auto;
+
+    padding:40px;
+
+    background:
+    rgba(255,255,255,.8);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:35px;
+
+    text-align:center;
+
+    border:4px solid #8b4513;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.12);
+
+    animation:
+    cardEnter 1s ease;
+}
+
+.detail-card h1{
+
+    font-size:3rem;
+
+    margin-bottom:25px;
+
+    color:#8b4513;
+
+    animation:
+    glowTitle 3s infinite alternate;
+}
+
+.detail-card p{
+
+    font-size:1.2rem;
+
+    margin:18px 0;
+
+    color:#444;
+}
+
+/* BUTTONS */
+
+.back-btn,
+.map-btn{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    margin-right:10px;
+
+    padding:14px 26px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    color:white;
+
+    background:#8b4513;
+
+    transition:.3s;
+}
+
+.back-btn:hover,
+.map-btn:hover{
+
+    transform:
+    translateY(-4px);
+
+    box-shadow:
+    0 10px 20px rgba(139,69,19,.3);
+}
+
+/* ANIMATIONS */
+
+@keyframes cardEnter{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes glowTitle{
+
+    from{
+        text-shadow:
+        0 0 5px rgba(139,69,19,.3);
+    }
+
+    to{
+        text-shadow:
+        0 0 20px rgba(139,69,19,.8);
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="mandala">✺</div>
+
+<div class="flowers">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<div class="container">
+
+<div class="detail-card">
+
+<h1>👐 Henna Day</h1>
+
+<p><strong>Date:</strong> 27 July (Monday)</p>
+
+<p><strong>Time:</strong> 4 PM</p>
+
+<p><strong>Location:</strong> Afiyath Car Porch</p>
+
+<p><strong>Dress Code:</strong> Casuals or Kaftan — Your Choice ✨</p>
+
+<p><strong>Special:</strong> Henna artists arranged for everyone 🌿</p>
+
+<a href="index.html" class="back-btn">
+← Home
+</a>
+
+<a href="#" class="map-btn">
+📍 Open Maps
+</a>
+
+</div>
+
+</div>
+
+</body>
+</html>

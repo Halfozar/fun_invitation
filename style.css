@@ -1,0 +1,407 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Cormorant Garamond',serif;
+
+
+background:
+linear-gradient(
+135deg,
+#fff8e7,
+#fffdf7,
+#fdf4e7
+);
+
+min-height:100vh;
+overflow-x:hidden;
+
+
+}
+
+/* CONTAINER */
+
+.container{
+width:90%;
+max-width:900px;
+margin:auto;
+padding:30px 0;
+position:relative;
+z-index:2;
+}
+
+/* HERO */
+
+.hero-svg{
+width:100%;
+margin-bottom:20px;
+}
+
+.main-title{
+fill:#c89b3c;
+font-size:36px;
+font-weight:700;
+
+
+filter:
+drop-shadow(0 0 8px rgba(201,162,39,.4));
+
+animation:titleGlow 3s infinite alternate;
+
+
+}
+
+.subtitle{
+fill:#666;
+font-size:18px;
+}
+
+/* COUNTDOWN */
+
+.countdown-box{
+
+
+background:rgba(255,255,255,.65);
+
+backdrop-filter:blur(12px);
+
+border-radius:25px;
+
+padding:20px;
+
+text-align:center;
+
+margin-bottom:30px;
+
+box-shadow:
+0 10px 25px rgba(0,0,0,.08);
+
+animation:
+fadeUp 1s ease,
+floatBox 4s ease-in-out infinite;
+
+
+}
+
+#countdown{
+margin-top:10px;
+font-size:1.4rem;
+font-weight:bold;
+color:#c89b3c;
+}
+
+/* CARDS */
+
+.cards{
+display:flex;
+flex-direction:column;
+gap:22px;
+}
+
+.card{
+
+
+position:relative;
+
+text-decoration:none;
+
+color:#333;
+
+padding:28px;
+
+text-align:center;
+
+font-size:1.4rem;
+
+font-weight:600;
+
+border-radius:35px;
+
+overflow:hidden;
+
+background:
+rgba(255,255,255,.7);
+
+backdrop-filter:blur(12px);
+
+box-shadow:
+0 10px 25px rgba(0,0,0,.08);
+
+transition:.4s;
+
+opacity:0;
+
+animation:
+fadeUp .8s ease forwards;
+
+
+}
+
+/* STAGGERED ANIMATION */
+
+.card:nth-child(1){animation-delay:.1s;}
+.card:nth-child(2){animation-delay:.2s;}
+.card:nth-child(3){animation-delay:.3s;}
+.card:nth-child(4){animation-delay:.4s;}
+.card:nth-child(5){animation-delay:.5s;}
+.card:nth-child(6){animation-delay:.6s;}
+.card:nth-child(7){animation-delay:.7s;}
+.card:nth-child(8){animation-delay:.8s;}
+.card:nth-child(9){animation-delay:.9s;}
+
+/* LUXURY SHINE */
+
+.card::before{
+
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-150%;
+
+width:60%;
+
+height:100%;
+
+background:
+linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.8),
+transparent
+);
+
+transform:skewX(-25deg);
+
+transition:1s;
+
+
+}
+
+.card:hover::before{
+left:150%;
+}
+
+/* GOLD BORDER */
+
+.card::after{
+
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+border:2px solid rgba(201,162,39,.3);
+
+border-radius:35px;
+
+pointer-events:none;
+
+
+}
+
+/* HOVER */
+
+.card:hover{
+
+
+transform:
+translateY(-8px)
+scale(1.02);
+
+box-shadow:
+0 20px 40px rgba(0,0,0,.15);
+
+
+}
+
+/* SPARKLES */
+
+.sparkles{
+
+
+position:fixed;
+
+inset:0;
+
+overflow:hidden;
+
+pointer-events:none;
+
+z-index:1;
+
+
+}
+
+.sparkles span{
+
+
+position:absolute;
+
+bottom:-50px;
+
+font-size:25px;
+
+animation:floatUp linear infinite;
+
+
+}
+
+.sparkles span::before{
+content:"✨";
+}
+
+.sparkles span:nth-child(1){
+left:10%;
+animation-duration:10s;
+}
+
+.sparkles span:nth-child(2){
+left:25%;
+animation-duration:13s;
+}
+
+.sparkles span:nth-child(3){
+left:40%;
+animation-duration:9s;
+}
+
+.sparkles span:nth-child(4){
+left:60%;
+animation-duration:15s;
+}
+
+.sparkles span:nth-child(5){
+left:80%;
+animation-duration:11s;
+}
+
+.sparkles span:nth-child(6){
+left:90%;
+animation-duration:14s;
+}
+
+/* FLORAL CORNERS */
+
+.corner{
+position:fixed;
+font-size:60px;
+opacity:.15;
+z-index:0;
+}
+
+.top-left{
+top:20px;
+left:20px;
+}
+
+.top-right{
+top:20px;
+right:20px;
+}
+
+/* ANIMATIONS */
+
+@keyframes floatUp{
+
+
+from{
+    transform:
+    translateY(0)
+    rotate(0deg);
+    opacity:0;
+}
+
+20%{
+    opacity:1;
+}
+
+to{
+    transform:
+    translateY(-120vh)
+    rotate(360deg);
+
+    opacity:0;
+}
+
+
+}
+
+@keyframes fadeUp{
+
+
+from{
+    opacity:0;
+    transform:
+    translateY(30px);
+}
+
+to{
+    opacity:1;
+    transform:
+    translateY(0);
+}
+
+
+}
+
+@keyframes floatBox{
+
+0%{
+    transform:translateY(0);
+}
+
+50%{
+    transform:translateY(-8px);
+}
+
+100%{
+    transform:translateY(0);
+}
+
+}
+
+@keyframes titleGlow{
+
+from{
+    filter:
+    drop-shadow(0 0 5px rgba(201,162,39,.3));
+}
+
+to{
+    filter:
+    drop-shadow(0 0 15px rgba(201,162,39,.7));
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.main-title{
+    font-size:28px;
+}
+
+.subtitle{
+    font-size:15px;
+}
+
+.card{
+    font-size:1.15rem;
+    padding:24px;
+}
+
+.corner{
+    font-size:40px;
+}
+
+}

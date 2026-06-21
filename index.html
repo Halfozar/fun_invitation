@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kifa's Functions</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="sparkles">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<div class="corner top-left">🌸</div>
+<div class="corner top-right">🌸</div>
+<div class="container">
+
+    <svg class="hero-svg" viewBox="0 0 600 220">
+
+        <path id="curve1"
+        d="M80 140 Q300 20 520 140"
+        fill="transparent"/>
+
+        <text class="main-title">
+            <textPath href="#curve1" startOffset="50%" text-anchor="middle">
+                ✨ KIFA'S FUNCTIONS ✨
+            </textPath>
+        </text>
+
+        <path id="curve2"
+        d="M150 170 Q300 80 450 170"
+        fill="transparent"/>
+
+        <text class="subtitle">
+            <textPath href="#curve2" startOffset="50%" text-anchor="middle">
+                We're Happily Inviting You 💛
+            </textPath>
+        </text>
+
+    </svg>
+
+    <div class="countdown-box">
+        <h3>Nikkah Countdown 💑</h3>
+        <div id="countdown"></div>
+    </div>
+
+    <div class="cards">
+
+        <a href="arikuthicheral.html" class="card">🍚 Arikuthicheral</a>
+        <a href="gulabi.html" class="card">🌹 Gulabi</a>
+        <a href="glitz.html" class="card">🕺 Glitz</a>
+        <a href="henna.html" class="card">👐 Henna Day</a>
+        <a href="mehendi.html" class="card">🎇 Mehendi</a>
+        <a href="nikkah.html" class="card">💑 Nikkah</a>
+        <a href="thalassery.html" class="card">🏛 Thalassery Reception</a>
+        <a href="trivandrum.html" class="card">🧡 Trivandrum Reception</a>
+        <a href="srk-day.html" class="card">😎 Shah Rukh Khan Day</a>
+
+    </div>
+
+</div>
+
+<script>
+
+const countdown=document.getElementById("countdown");
+
+const target=new Date("July 29, 2026 16:30:00");
+
+setInterval(()=>{
+
+let now=new Date();
+
+let diff=target-now;
+
+let d=Math.floor(diff/(1000*60*60*24));
+let h=Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+let m=Math.floor((diff%(1000*60*60))/(1000*60));
+
+countdown.innerHTML=
+`${d} Days ${h} Hours ${m} Minutes`;
+
+},1000);
+
+</script>
+
+</body>
+</html>

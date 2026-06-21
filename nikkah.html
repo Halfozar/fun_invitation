@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nikkah 💑</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+    background:
+    linear-gradient(
+    135deg,
+    #0b1026,
+    #131c45,
+    #1d295f
+    );
+
+    overflow:hidden;
+}
+
+/* MOON */
+
+.moon{
+
+    position:fixed;
+
+    top:60px;
+    right:80px;
+
+    width:120px;
+    height:120px;
+
+    border-radius:50%;
+
+    background:#ffd700;
+
+    box-shadow:
+    0 0 40px rgba(255,215,0,.8);
+
+}
+
+.moon::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:100px;
+    height:100px;
+
+    border-radius:50%;
+
+    background:#0b1026;
+
+    top:10px;
+    left:25px;
+}
+
+/* STARS */
+
+.stars span{
+
+    position:absolute;
+
+    color:white;
+
+    animation:
+    twinkle 2s infinite alternate;
+}
+
+.stars span:nth-child(1){
+    top:10%;
+    left:15%;
+}
+
+.stars span:nth-child(2){
+    top:20%;
+    left:75%;
+}
+
+.stars span:nth-child(3){
+    top:40%;
+    left:20%;
+}
+
+.stars span:nth-child(4){
+    top:60%;
+    left:80%;
+}
+
+.stars span:nth-child(5){
+    top:75%;
+    left:40%;
+}
+
+@keyframes twinkle{
+
+    from{
+        opacity:.2;
+    }
+
+    to{
+        opacity:1;
+    }
+}
+
+/* GOLD PARTICLES */
+
+.gold span{
+
+    position:absolute;
+
+    bottom:-50px;
+
+    font-size:20px;
+
+    animation:
+    goldFloat linear infinite;
+}
+
+.gold span::before{
+    content:"✨";
+}
+
+.gold span:nth-child(1){
+    left:10%;
+    animation-duration:10s;
+}
+
+.gold span:nth-child(2){
+    left:30%;
+    animation-duration:14s;
+}
+
+.gold span:nth-child(3){
+    left:50%;
+    animation-duration:12s;
+}
+
+.gold span:nth-child(4){
+    left:70%;
+    animation-duration:15s;
+}
+
+.gold span:nth-child(5){
+    left:90%;
+    animation-duration:11s;
+}
+
+@keyframes goldFloat{
+
+    from{
+        transform:translateY(0);
+        opacity:0;
+    }
+
+    20%{
+        opacity:1;
+    }
+
+    to{
+        transform:translateY(-120vh);
+        opacity:0;
+    }
+}
+
+/* CARD */
+
+.detail-card{
+
+    max-width:750px;
+
+    margin:80px auto;
+
+    padding:45px;
+
+    background:
+    rgba(255,255,255,.10);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,215,0,.3);
+
+    border-radius:35px;
+
+    text-align:center;
+
+    color:white;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.3);
+
+    animation:
+    cardEnter 1.2s ease;
+}
+
+.nikkah-title{
+
+    font-size:3.2rem;
+
+    color:#ffd700;
+
+    margin-bottom:25px;
+
+    animation:
+    titleGlow 3s infinite alternate;
+}
+
+.detail-card p{
+
+    font-size:1.25rem;
+
+    margin:18px 0;
+}
+
+/* BUTTONS */
+
+.back-btn,
+.map-btn{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    margin-right:10px;
+
+    padding:14px 26px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    color:#0b1026;
+
+    background:#ffd700;
+
+    transition:.3s;
+}
+
+.back-btn:hover,
+.map-btn:hover{
+
+    transform:
+    translateY(-4px);
+
+    box-shadow:
+    0 0 20px rgba(255,215,0,.8);
+}
+
+/* ANIMATIONS */
+
+@keyframes cardEnter{
+
+    from{
+        opacity:0;
+        transform:translateY(60px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes titleGlow{
+
+    from{
+        text-shadow:
+        0 0 10px rgba(255,215,0,.4);
+    }
+
+    to{
+        text-shadow:
+        0 0 30px rgba(255,215,0,1);
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="moon"></div>
+
+<div class="stars">
+<span>⭐</span>
+<span>⭐</span>
+<span>⭐</span>
+<span>⭐</span>
+<span>⭐</span>
+</div>
+
+<div class="gold">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<div class="container">
+
+<div class="detail-card">
+
+<h1 class="nikkah-title">💑 Nikkah</h1>
+
+<p><strong>Date:</strong> 29 July (Wednesday)</p>
+
+<p><strong>Time:</strong> 4:30 PM</p>
+
+<p><strong>Location:</strong> Sargalaya</p>
+
+<p><strong>Dress Code:</strong> Your Wish ✨</p>
+
+<a href="index.html" class="back-btn">
+← Home
+</a>
+
+<a href="#" class="map-btn">
+📍 Open Maps
+</a>
+
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Arikuthicheral 🍚</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+    background:linear-gradient(
+        135deg,
+        #fff9e6,
+        #fff6d5,
+        #fffef5
+    );
+    overflow:hidden;
+}
+
+.rice{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+}
+
+.rice span{
+    position:absolute;
+    top:-50px;
+    font-size:22px;
+    animation:riceFall linear infinite;
+}
+
+.rice span::before{
+    content:"🌾";
+}
+
+.rice span:nth-child(1){
+    left:10%;
+    animation-duration:10s;
+}
+
+.rice span:nth-child(2){
+    left:25%;
+    animation-duration:14s;
+}
+
+.rice span:nth-child(3){
+    left:40%;
+    animation-duration:11s;
+}
+
+.rice span:nth-child(4){
+    left:60%;
+    animation-duration:13s;
+}
+
+.rice span:nth-child(5){
+    left:80%;
+    animation-duration:12s;
+}
+
+@keyframes riceFall{
+    from{
+        transform:translateY(-100px) rotate(0deg);
+    }
+
+    to{
+        transform:translateY(120vh) rotate(360deg);
+    }
+}
+
+.detail-card{
+    max-width:700px;
+    margin:60px auto;
+    padding:40px;
+
+    background:rgba(255,255,255,.8);
+    backdrop-filter:blur(15px);
+
+    border-radius:35px;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+    animation:cardEnter 1s ease;
+}
+
+.detail-card h1{
+    font-size:3rem;
+    margin-bottom:25px;
+
+    color:#d4a017;
+
+    animation:glowTitle 3s infinite alternate;
+}
+
+.detail-card p{
+    font-size:1.25rem;
+    margin:18px 0;
+    color:#444;
+}
+
+.back-btn,
+.map-btn{
+
+    display:inline-block;
+
+    margin-top:25px;
+    margin-right:10px;
+
+    padding:14px 26px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    color:white;
+
+    background:#d4a017;
+
+    transition:.3s;
+}
+
+.back-btn:hover,
+.map-btn:hover{
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 10px 20px rgba(212,160,23,.4);
+}
+
+@keyframes cardEnter{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes glowTitle{
+
+    from{
+        text-shadow:
+        0 0 5px rgba(212,160,23,.3);
+    }
+
+    to{
+        text-shadow:
+        0 0 20px rgba(212,160,23,.8);
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="rice">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<div class="container">
+
+    <div class="detail-card">
+
+        <h1>🍚 Arikuthicheral</h1>
+
+        <p><strong>Date:</strong> 25 July (Saturday)</p>
+
+        <p><strong>Time:</strong> 3 PM – 8 PM</p>
+
+        <p><strong>Location:</strong> Theeram Roof Garden</p>
+
+        <p><strong>Dress Code:</strong> Yellow 🌻</p>
+
+        <a href="index.html" class="back-btn">
+            ← Home
+        </a>
+
+        <a href="#" class="map-btn">
+            📍 Open Maps
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

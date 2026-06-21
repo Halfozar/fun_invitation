@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Thalassery Reception ✨</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+    background:
+    linear-gradient(
+    135deg,
+    #2c1810,
+    #5c4033,
+    #c2a878
+    );
+
+    overflow:hidden;
+}
+
+/* FLOATING LIGHTS */
+
+.lights{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+}
+
+.lights span{
+    position:absolute;
+    bottom:-50px;
+    width:12px;
+    height:12px;
+    border-radius:50%;
+
+    background:#ffd700;
+
+    box-shadow:
+    0 0 20px #ffd700;
+
+    animation:floatLight linear infinite;
+}
+
+.lights span:nth-child(1){
+    left:10%;
+    animation-duration:10s;
+}
+
+.lights span:nth-child(2){
+    left:25%;
+    animation-duration:14s;
+}
+
+.lights span:nth-child(3){
+    left:40%;
+    animation-duration:12s;
+}
+
+.lights span:nth-child(4){
+    left:60%;
+    animation-duration:16s;
+}
+
+.lights span:nth-child(5){
+    left:80%;
+    animation-duration:11s;
+}
+
+.lights span:nth-child(6){
+    left:90%;
+    animation-duration:13s;
+}
+
+@keyframes floatLight{
+
+    from{
+        transform:translateY(0);
+        opacity:0;
+    }
+
+    20%{
+        opacity:1;
+    }
+
+    to{
+        transform:translateY(-120vh);
+        opacity:0;
+    }
+}
+
+/* CARD */
+
+.detail-card{
+
+    max-width:750px;
+
+    margin:80px auto;
+
+    padding:45px;
+
+    background:
+    rgba(255,255,255,.12);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,215,0,.3);
+
+    border-radius:35px;
+
+    text-align:center;
+
+    color:white;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.3);
+
+    animation:
+    cardEnter 1s ease;
+}
+
+.detail-card h1{
+
+    font-size:3rem;
+
+    color:#ffd700;
+
+    margin-bottom:20px;
+
+    animation:
+    glowTitle 3s infinite alternate;
+}
+
+.divider{
+
+    color:#ffd700;
+
+    margin-bottom:25px;
+
+    font-size:1.3rem;
+
+    letter-spacing:12px;
+}
+
+.detail-card p{
+
+    font-size:1.2rem;
+
+    margin:18px 0;
+}
+
+/* BUTTONS */
+
+.back-btn,
+.map-btn{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    margin-right:10px;
+
+    padding:14px 26px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    color:#2c1810;
+
+    background:#ffd700;
+
+    transition:.3s;
+}
+
+.back-btn:hover,
+.map-btn:hover{
+
+    transform:
+    translateY(-4px);
+
+    box-shadow:
+    0 0 20px rgba(255,215,0,.8);
+}
+
+/* ANIMATIONS */
+
+@keyframes cardEnter{
+
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes glowTitle{
+
+    from{
+        text-shadow:
+        0 0 10px rgba(255,215,0,.4);
+    }
+
+    to{
+        text-shadow:
+        0 0 30px rgba(255,215,0,1);
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="lights">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<div class="container">
+
+<div class="detail-card">
+
+<h1>🏛 Thalassery Reception</h1>
+
+<div class="divider">❈ ❈ ❈</div>
+
+<p><strong>Date:</strong> 30 July (Thursday)</p>
+
+<p><strong>Time:</strong> Evening</p>
+
+<p><strong>Location:</strong> To Be Announced ✨</p>
+
+<p><strong>Dress Code:</strong> Your Wish</p>
+
+<a href="index.html" class="back-btn">
+← Home
+</a>
+
+<a href="#" class="map-btn">
+📍 Open Maps
+</a>
+
+</div>
+
+</div>
+
+</body>
+</html>
