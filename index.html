@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -8,90 +10,224 @@
 
 <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-<div class="sparkles">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-</div>
-<div class="corner top-left">🌸</div>
-<div class="corner top-right">🌸</div>
+<div class="background-blur"></div>
+
 <div class="container">
 
-    <svg class="hero-svg" viewBox="0 0 600 220">
+<!-- ========================= -->
+<!-- HERO CARD -->
+<!-- ========================= -->
 
-        <path id="curve1"
-        d="M80 140 Q300 20 520 140"
-        fill="transparent"/>
+<div class="hero-card">
 
-        <text class="main-title">
-            <textPath href="#curve1" startOffset="50%" text-anchor="middle">
-                ✨ KIFA'S FUNCTIONS ✨
-            </textPath>
-        </text>
+<div class="hero-left">
 
-        <path id="curve2"
-        d="M150 170 Q300 80 450 170"
-        fill="transparent"/>
+<div class="hero-image-circle">
 
-        <text class="subtitle">
-            <textPath href="#curve2" startOffset="50%" text-anchor="middle">
-                We're Happily Inviting You 💛
-            </textPath>
-        </text>
-
-    </svg>
-
-    <div class="countdown-box">
-        <h3>Nikkah Countdown 💑</h3>
-        <div id="countdown"></div>
-    </div>
-
-    <div class="cards">
-
-        <a href="arikuthicheral.html" class="card">🍚 Arikuthicheral</a>
-        <a href="gulabi.html" class="card">🌹 Gulabi</a>
-        <a href="glitz.html" class="card">🕺 Glitz</a>
-        <a href="henna.html" class="card">👐 Henna Day</a>
-        <a href="mehendi.html" class="card">🎇 Mehendi</a>
-        <a href="nikkah.html" class="card">💑 Nikkah</a>
-        <a href="thalassery.html" class="card">🏛 Thalassery Reception</a>
-        <a href="trivandrum.html" class="card">🧡 Trivandrum Reception</a>
-        <a href="srk-day.html" class="card">😎 Shah Rukh Khan Day</a>
-
-    </div>
+<img src="images\kifa.jpeg"
+class="hero-image">
 
 </div>
 
-<script>
+</div>
 
-const countdown=document.getElementById("countdown");
+<div class="hero-right">
 
-const target=new Date("July 29, 2026 16:30:00");
+<h1>KIFA'S PRE WEDDING PARUPPADIS</h1>
 
-setInterval(()=>{
+<h3>❤ We're Happily Inviting You ❤</h3>
 
-let now=new Date();
+<p>
 
-let diff=target-now;
+Join us as we celebrate love,
+laughter, unforgettable memories
+and beautiful moments together.
 
-let d=Math.floor(diff/(1000*60*60*24));
-let h=Math.floor((diff%(1000*60*60*24))/(1000*60*60));
-let m=Math.floor((diff%(1000*60*60))/(1000*60));
+</p>
 
-countdown.innerHTML=
-`${d} Days ${h} Hours ${m} Minutes`;
+<div class="gold-line"></div>
 
-},1000);
+</div>
 
-</script>
+</div>
+
+<!-- ========================= -->
+<!-- ARIKUTHICHERAL -->
+<!-- ========================= -->
+
+<a href="arikuthicheral.html" class="event-link">
+
+<div class="event-card yellow">
+
+<div class="event-image">
+
+<img src="images\ari.jpeg"">
+
+</div>
+
+<div class="event-details">
+
+<h2>Arikuthicheral</h2>
+
+<div class="event-info">
+
+<div>
+
+<p>
+    
+
+</p>
+
+<p>
+
+
+<strong>Details :</strong>
+
+Arikuthal Kalyanam (അരികുത്തൽ കല്യാണം) is a cherished pre-wedding ritual practiced in parts of the Malabar region of Kerala, especially among Mappila Muslim families. The ceremony symbolizes prosperity, abundance, and the family's blessings for the bride before the marriage.
+
+</p>
+
+<p>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="open-button">
+
+➜
+
+</div>
+
+</div>
+
+</a>
+<!-- ========================= -->
+<!-- GULABI -->
+<!-- ========================= -->
+
+<a href="gulabi.html" class="event-link">
+
+<div class="event-card pink">
+
+<div class="event-image">
+
+<img src="images\gulabi.jpeg" alt="Gulabi">
+
+</div>
+
+<div class="event-details">
+
+<h2>Gulabi</h2>
+
+<div class="event-info">
+
+<div>
+
+<p>
+
+<strong>Details :</strong>
+Gulabi Function (Gulabi Ceremony) is a joyful pre-wedding ritual.The event is festive and filled with laughter, music, and togethernes. A pink paste is applied on the bride by her loved ones.
+</p>
+
+</div>
+
+<div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="open-button">
+
+➜
+
+</div>
+
+</div>
+
+</a>
+
+
+<!-- ========================= -->
+<!-- GLITZ -->
+<!-- ========================= -->
+
+<a href="glitz.html" class="event-link">
+
+<div class="event-card blue">
+
+<div class="event-image">
+
+<img src="images\glitz.jpeg" alt="Glitz">
+
+</div>
+
+<div class="event-details">
+
+<h2>Glitz</h2>
+
+<div class="event-info">
+
+<div>
+
+<p>
+
+<strong>Details :</strong>
+</p>
+
+</div>
+
+</div>
+
+<div class="open-button">
+
+➜
+
+</div>
+
+</div>
+
+</a>
+
+
+<!-- ========================= -->
+<!-- FOOTER -->
+<!-- ========================= -->
+
+<div class="footer-card">
+
+<h2>✨ We Can't Wait To Celebrate With You ✨</h2>
+
+<p>
+
+Your presence will make these moments
+even more memorable.
+
+We look forward to celebrating together!
+
+💛
+
+</p>
+
+</div>
+
+</div>
 
 </body>
+
 </html>
